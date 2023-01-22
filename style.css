@@ -1,0 +1,26 @@
+body {
+    position: relative;
+}
+
+#fishHead {
+    display: block;
+    margin: 120px auto;
+}
+
+#stats {
+    margin-right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats l {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    background-color: aquamarine;
+    border-style: ridge;
+    border-color: coral;
+    border-radius: 15%;
+    margin-right: 20px;
+    margin-left: 20px;
+}

@@ -9,6 +9,12 @@ class creatureOne {
 }
 
 
-let creatureName = prompt("What is your creature's name?")
+let creatureName = "ro"//prompt("What is your creature's name?")
 let creatureProtagonist = new creatureOne(creatureName)
+let creatureStats = document.getElementById("stats")
+creatureStats.children[0].innerHTML = `Hunger: ${creatureProtagonist.hunger}`
+creatureStats.children[1].innerHTML = `Sleepiness: ${creatureProtagonist.sleepiness}`
+creatureStats.children[2].innerHTML = `Boredom: ${creatureProtagonist.boredom}`
+creatureStats.children[3].innerHTML = `Age: ${creatureProtagonist.age}`
 
+console.log(creatureStats.children[0])
