@@ -1,14 +1,21 @@
-body {
-    position: relative;
+img {
+    display: block;
+    margin: 50px auto;
 }
 
-#fishHead {
-    display: block;
-    margin: 120px auto;
+#clockFace {
+    z-index: -1;
+    position: relative;
+    bottom: 270px;
+    border-style: groove;
+    border-color: black;
+    border-width: 7px;
+    border-radius: 95%;
+
 }
 
 #stats {
-    margin-right: 35px;
+    margin-right: 39px;
     display: flex;
     justify-content: center;
     align-items: center;
