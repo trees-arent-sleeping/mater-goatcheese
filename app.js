@@ -9,3 +9,6 @@ class creatureOne {
 }
 
 
+let creatureName = prompt("What is your creature's name?")
+let creatureProtagonist = new creatureOne(creatureName)
+
