@@ -1,9 +1,16 @@
-img {
-    display: block;
-    margin: 50px auto;
+body {
+    background-image: url("https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F2RNK1P0BYVrSCZEy_Sd1Ew%252F3417757448_4a6bdf36ce_o.jpg&width=910");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#clockFace {
+img, p {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#clockFace, #fishHead {
     z-index: -1;
     position: relative;
     bottom: 270px;
@@ -11,7 +18,14 @@ img {
     border-color: black;
     border-width: 7px;
     border-radius: 95%;
+}
 
+#fishHead {
+    position: inherit;
+}
+
+#fingerTime {
+    transition-duration: 1s;
 }
 
 #stats {
@@ -21,7 +35,7 @@ img {
     align-items: center;
 }
 
-#stats l {
+p, #stats l {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     background-color: aquamarine;
@@ -30,4 +44,10 @@ img {
     border-radius: 15%;
     margin-right: 20px;
     margin-left: 20px;
+}
+
+p {
+    position: relative;
+    bottom: 270px;
+    margin: 10px 720px 10px 720px;
 }
