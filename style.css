@@ -2,12 +2,16 @@ body {
     background-image: url("https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F2RNK1P0BYVrSCZEy_Sd1Ew%252F3417757448_4a6bdf36ce_o.jpg&width=910");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow:hidden;
+    max-width: 100%;
+    user-select: none;
 }
 
-img, p {
+img, p, #days {
     display: block;
     margin: 50px auto;
     text-align: center;
+    transition-duration: 1s;
 }
 
 #clockFace, #fishHead {
@@ -24,8 +28,8 @@ img, p {
     position: inherit;
 }
 
-#fingerTime {
-    transition-duration: 1s;
+#fingerTime  {
+    transform: rotate(18deg);
 }
 
 #stats {
@@ -37,17 +41,30 @@ img, p {
 
 p, #stats l {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
-    background-color: aquamarine;
-    border-style: ridge;
-    border-color: coral;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(205, 70, 70);
+    border-style:groove;
+    border-color: black;
     border-radius: 15%;
     margin-right: 20px;
     margin-left: 20px;
 }
 
-p {
+#controls {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: groove;
+    position: relative;
+    bottom: 265px;
+    margin: 0px 25% 0px 25%;
+    border-radius: 10%;
+    background-image: url(https://i.pinimg.com/736x/96/c6/9b/96c69bc506a39b4e233c5c87d0f920a5.jpg);
+    background-size: cover;
+    background-color: rgb(255, 87, 51);
+}
+
+#days {
     position: relative;
     bottom: 270px;
-    margin: 10px 720px 10px 720px;
+    margin: 0px 25% 0px 25%;
 }
