@@ -19,7 +19,7 @@ let hand = document.getElementById("fingerTime")
 let petPic = document.getElementById("ourBrick")
 let brickNick = document.getElementById("brickName")
 brickNick.innerHTML = creatureName
- // accessing the <uL> stats (hunger, heat boredom, age), <p> name, <img> hand, and initial image <img> for the pet. Displays the user's input for a pet name
+brickNick.style.transform = `scale(${1+creatureName.length/15})` // grows the pet's nametag based on its length. Accessing the <uL> stats (hunger, heat boredom, age), <p> name, <img> hand, and initial image <img> for the pet. Displays the user's input for a pet name
 
 let daysDisplay = document.getElementById("days") // accessing the <p> which displays how many days have passed
 let daysNum = 0 // this variable will keep track of how many days have passed. daysDisplay will display it
@@ -63,10 +63,11 @@ function updateStats() {
     creatureStats.children[2].innerHTML = `Boredom: ${creatureProtagonist.boredom}`
     creatureStats.children[2].style.transform = `scale(${1+creatureProtagonist.boredom/17})`
     creatureStats.children[3].innerHTML = `Age: ${creatureProtagonist.age}`
+    daysDisplay.innerHTML = `Days: ${Math.floor(daysNum)}`; // updates the tag that displays the current day
 } // updates the <p> tags which display the pet's stats and uses a CSS transform property to scale that tag based on the size of the state. The stat is divided by 17 and added to a minimum of 1 so that the tag does not shrink out of view
 
 degrees = 18 // setting the initial position of the time hand, which puts the index finger on 12
-function passTime() {
+function animateTime() {
     degrees += 24 // the clock ticks in big motions at a time
     hand.style.transform = `rotate(${degrees}deg)`
     if (daysNum % 75 == 0) {
@@ -77,8 +78,8 @@ function passTime() {
     petPic.style.width = "10%";
     petPic.style.height = "auto"; // the images vary in size so they each need to be formatted as they come in
 }
-setInterval(()=>{
-    daysNum += 1
+
+function incrementStats() {
     if (daysNum % 365 == 0) {
         creatureProtagonist.age +=1
         splashButton(3)
@@ -89,8 +90,9 @@ setInterval(()=>{
         creatureProtagonist.boredom +=1
         creatureProtagonist.heat +=2 // hunger and boredom are incremented by 1 every 73 days, heat by 2
     }
-    daysDisplay.innerHTML = `Days: ${Math.floor(daysNum)}`; // updates the tag that displays the current day
-    updateStats();
+}
+
+function endMessages() {
     if (creatureProtagonist.boredom > 9) {
         alert("the brick was BORED!!")
     } else if (creatureProtagonist.heat > 9) {
@@ -99,9 +101,17 @@ setInterval(()=>{
         alert("the brick was too HUNGRY")
     } else if (creatureProtagonist.age > 10) {
         alert("the brick lived happily ever after")
-    }// if any of the stats increase above 10, fail messages are alerted. A win message happens at 10 years 
+    }
+}
+
+setInterval(()=>{
+    daysNum += 1
+    incrementStats()
+    updateStats()
+    endMessages()
+    // if any of the stats increase above 10, fail messages are alerted. A win message happens at 10 years 
 },41.0958904109589)
-setInterval(passTime, 1000) // with some math, these intervals make a year pass in 15 seconds while still allowing for daysNum to be incremented in whole numbers
+setInterval(animateTime, 1000) // with some math, these intervals make a year pass in 15 seconds while still allowing for daysNum to be incremented in whole numbers
 
 
 

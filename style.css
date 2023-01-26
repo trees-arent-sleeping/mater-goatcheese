@@ -2,10 +2,11 @@ body {
     background-image: url(brickpics/bliss.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow:hidden;
+    overflow:hidden; 
     max-width: 100%;
     user-select: none;
     text-shadow: rgb(0, 0, 0) 5px 5px;
+    zoom: 50%;
 }
 
 img, p, #days {
