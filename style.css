@@ -1,10 +1,11 @@
 body {
-    background-image: url("https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F2RNK1P0BYVrSCZEy_Sd1Ew%252F3417757448_4a6bdf36ce_o.jpg&width=910");
+    background-image: url(brickpics/bliss.webp);
     background-repeat: no-repeat;
     background-size: cover;
     overflow:hidden;
     max-width: 100%;
     user-select: none;
+    text-shadow: rgb(0, 0, 0) 5px 5px;
 }
 
 img, p, #days {
@@ -14,7 +15,7 @@ img, p, #days {
     transition-duration: 1s;
 }
 
-#clockFace, #fishHead {
+#clockFace, #ourBrick {
     z-index: -1;
     position: relative;
     bottom: 270px;
@@ -24,19 +25,19 @@ img, p, #days {
     border-radius: 95%;
 }
 
-#fishHead {
+#ourBrick {
+    border-radius: 10%;
     position: inherit;
 }
 
 #fingerTime  {
-    transform: rotate(18deg);
+    transform-origin: center;
 }
 
 #stats {
-    margin-right: 39px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: 0px 25% 0px 25%;
 }
 
 p, #stats l {
@@ -47,8 +48,10 @@ p, #stats l {
     border-style:groove;
     border-color: black;
     border-radius: 15%;
-    margin-right: 20px;
-    margin-left: 20px;
+}
+
+#days {
+    border-radius: 5%;
 }
 
 #controls {
@@ -56,15 +59,30 @@ p, #stats l {
     border-style: groove;
     position: relative;
     bottom: 265px;
-    margin: 0px 25% 0px 25%;
-    border-radius: 10%;
-    background-image: url(https://i.pinimg.com/736x/96/c6/9b/96c69bc506a39b4e233c5c87d0f920a5.jpg);
-    background-size: cover;
-    background-color: rgb(255, 87, 51);
+    margin: 30px 30% 0px 30%;
+    border-radius: 7%;
+    background-color: rgb(10, 10, 10);
+
+}
+
+#brickName {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: groove;
+    position: relative;
+    margin: 30px 40% 0px 40%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(205, 70, 70);
+    border-style:groove;
+    border-color: black;
+    border-radius: 7%;
+}
+
+#controls p {
+    margin: 15px 31% 20px 31%;
 }
 
 #days {
     position: relative;
     bottom: 270px;
-    margin: 0px 25% 0px 25%;
+    margin: 0px 30% 0px 30%;
 }
